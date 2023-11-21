@@ -4,11 +4,12 @@ import styled from '@emotion/styled';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import Paper from '@mui/material/Paper';
+import TextField from '@mui/material/TextField';
 
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
-
+const themeColorMain="#D41E1E"
 
 const Text1 = styled.div`
     font-family: 'SF Pro', sans-serif;
@@ -37,68 +38,131 @@ const Text3 =  styled.div`
     width: -2;
     align: center
 `;
+const Text4 =  styled.div`
+    font-family: 'SF Pro', sans-serif;
+    font-weight: 700;
+    font-size: 39px;
+    line-height: 44px;
+    width: -2;
+    align: center;
+    letter-spacing: -1px;
+`;
+
+const Text5 =  styled.div`
+    font-family: 'SF Pro', sans-serif;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 30px;
+`;
+
+const Text6 =  styled.div`
+    font-family: 'SF Pro', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+    width: -2;
+    align: center;
+    letter-spacing: -1px;
+`;
+
+
+
+
 
 const stepsForWorking = [
     <Box sx={{
         width: "420px",
-        height: "674px",
-        margin: "30px"
+        height: "694px",
+        margin: "20px"
     }}>
         <Text3 style={{color:"#E0E0E0"}}>Step1</Text3>
         <Box sx={{
-            width: "420px",
-            height: "584px",
+            width: "430px",
+            height: "604px",
             backgroundColor:"#FFFFFF",
             marginTop: "70px",
             "border-radius": "12px;"
         }}>
             <img alt=""
                  src="/Step_1_Image.svg"
-                 style={{width:"400px",height:"570px"}}
-
+                style={{marginLeft:"-80px",marginTop:"20px"}}
             />
+            <div
+                className="nfc-tag"
+                style={{
+                    width: '370px',
+                    height: '48px',
+                    marginTop: '20px',
+                    marginLeft: '25px',
+                    fontFamily: 'SF Pro',
+                    fontWeight: 400,
+                    fontSize: '25px',
+                    lineHeight: '23.87px',
+                }}>Customers scan an NFC tag and order food through an online menu </div>
         </Box>
     </Box>,
 
+<Box sx={{
+        width: "420px",
+        height: "694px",
+        margin: "20px"
+    }}>
+        <Text3 style={{color:"#E0E0E0"}}>Step1</Text3>
+        <Box sx={{
+            width: "430px",
+            height: "604px",
+            backgroundColor:"#FFFFFF",
+            marginTop: "70px",
+            "border-radius": "12px;"
+        }}>
+            <img alt=""
+                 src="/Pop-Image.svg"
+                style={{marginLeft:"-80px",marginTop:"15px"}}
+            />
+            <div
+                className="nfc-tag"
+                style={{
+                    width: '370px',
+                    height: '48px',
+                    marginTop: '20px',
+                    marginLeft: '25px',
+                    fontFamily: 'SF Pro',
+                    fontWeight: 400,
+                    fontSize: '25px',
+                    lineHeight: '23.87px',
+                }}>Handle all their orders through your POS tablet screen</div>
+        </Box>
+    </Box>,
 
 <Box sx={{
     width: "420px",
-    height: "674px",
-    margin: "30px"
+    height: "694px",
+    margin: "20px"
 }}>
     <Text3 style={{color:"#E0E0E0"}}>Step1</Text3>
     <Box sx={{
-        width: "420px",
-        height: "584px",
+        width: "430px",
+        height: "604px",
         backgroundColor:"#FFFFFF",
         marginTop: "70px",
         "border-radius": "12px;"
     }}>
         <img alt=""
-             src="/Step_1_Image.svg"
-             style={{width:"400px",height:"570px"}}
-
+             src="/Pop-Image3.svg"
+            style={{marginLeft:"-80px",marginTop:"-40px"}}
         />
-    </Box>
-</Box>,
- <Box sx={{
-    width: "420px",
-    height: "674px",
-    margin: "30px"
-}}>
-    <Text3 style={{color:"#E0E0E0"}}>Step1</Text3>
-    <Box sx={{
-        width: "420px",
-        height: "584px",
-        backgroundColor:"#FFFFFF",
-        marginTop: "70px",
-        "border-radius": "12px;"
-    }}>
-        <img alt=""
-             src="/Step_1_Image.svg"
-             style={{width:"400px",height:"570px"}}
-
-        />
+        <div
+            className="nfc-tag"
+            style={{
+                width: '370px',
+                height: '48px',
+                marginTop: '20px',
+                marginLeft: '25px',
+                fontFamily: 'SF Pro',
+                fontWeight: 400,
+                fontSize: '25px',
+                lineHeight: '23.87px',
+            }}>Your customers pay for their food, online or in-person</div>
     </Box>
 </Box>,
 ]
@@ -107,7 +171,6 @@ function body() {
     return(
         <Box sx={{
                 width: '100vw',
-                height: "4717px",
                 justifyContent: 'center', // Center horizontally
                 border: '1px solid #ccc',
             }}
@@ -140,9 +203,9 @@ function body() {
                         '& button': { m: 1 }
                     }}
                         style={{justifyContent: 'flex-end'}}
-                    >   <Button variant="contained" size="large" style={{height:'62px', width: '190px'}}>Try the Demo</Button>
-                        <Button variant="outlined" size="large" endIcon={<SendIcon />}
-                            style={{border: '2px solid', height:'62px', width: '190px', marginLeft: '20px'}}>Contact us</Button>
+                    >   <Button variant="contained" size="large" style={{backgroundColor:themeColorMain, height:'62px', width: '190px'}}>Try the Demo</Button>
+                        <Button variant="outlined" size="large"  endIcon={<SendIcon />}
+                            style={{outlineColor:themeColorMain, color:"grey", border: '2px solid', height:'62px', width: '190px', marginLeft: '20px'}}>Contact us</Button>
                      </Box>
                 </Paper>
 
@@ -197,9 +260,114 @@ function body() {
                             justifyContent: 'center',
                             flexDirection: 'row',
                             display: 'flex',
-                            }}>{stepsForWorking}</Box>
+                        }}>{stepsForWorking}</Box>
                     {}
                 </Box>
+            </Box>
+
+                {//animation:  TBD
+                }
+            <img alt=""
+                 src="/About_Mobile Menu_Section Animated.svg"
+                 style={{marginTop:"120px"}}
+            />
+
+            <img alt=""
+                 src="/About_POS_Section.svg"
+                 style={{marginTop:"120px"}}
+            />
+            <Box sx={{
+                    display: 'flex',
+                    width: '100vw',
+                    height: "750px",
+                    justifyContent: 'center',
+                    flexDirection: 'row',
+                }}
+            >
+                <img alt=""
+                    src="iPad_Mini.svg"
+                    style={{marginTop:"120px", marginLeft:"-140px"}}
+                />
+                <Box sx={{
+                    marginTop:"250px",
+                    height: "750px",
+                    width: "500px",
+                    marginLeft:"-40px",
+                    justifyContent: 'center',
+                }}>
+                <Text4 style={{}}>Don't Have A Tablet?</Text4>
+                <Text5 style={{marginTop:"35px", marginLeft:"-120px"}}>We got you covered</Text5>
+                <Box style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    width:'500px'
+                }}>
+                    <img alt=""
+                        src="Tablet_Specs.svg"
+                        style={{marginLeft:"80px",marginTop:"40px"}}
+                    />
+                    </Box>
+                <Button variant="contained" size="large" style={{backgroundColor:themeColorMain, height:'62px', width: '300px',marginTop:"30px",marginLeft:"-50px"}}>Buy Now *Starting from 299$</Button>
+                </Box>
+            </Box>
+
+            <Box sx={{
+                    justifyContent: 'center',
+                    width: '100vw',
+                    marginTop: "100px"
+                }}
+            >
+                <Text4 style={{}}>Are You A Restaurant Owner? Join Us Today!</Text4>
+                <Paper elevation={10}
+                    sx={{
+                        padding:"25px",
+                        width: '908px',
+                        height: '670px',
+                        marginTop: '30px',
+                        marginLeft:"340px",
+                        gap: '36px',
+                        borderRadius: '40px',
+                    }}>
+                        <Text6 style={{marginLeft: '-400px', marginTop:"20px"}}>Fill Out This Form To Get In Contact With Us</Text6>
+                        <Box sx={{
+                            justifyContent: 'center',
+                            marginTop: "30px"
+                        }}>
+                            <TextField style={{width:"400px"}} color="error" id="outlined-basic" label="First name*" variant="outlined" />
+                            <TextField style={{width:"400px", marginLeft:"20px"}} color="error" id="outlined-basic" label="Last name*" variant="outlined" />
+                        </Box>
+
+                        <Box style={{width:"100vx", marginTop:"20px"}}>
+                            <TextField style={{width:"820px"}} color="error" id="outlined-basic" label="Email*" variant="outlined" />
+                        </Box>
+
+                        <Box style={{width:"100vx",marginTop:"20px"}}>
+                            <TextField style={{width:"820px"}} color="error" id="outlined-basic" label="Phone number*" variant="outlined" />
+                        </Box>
+
+                        <Box style={{width:"100vx",marginTop:"20px"}}>
+                            <TextField style={{width:"820px"}} color="error" id="outlined-basic" label="Restaurant name*" variant="outlined" />
+                        </Box>
+
+                        <Box style={{width:"100vx",marginTop:"20px"}}>
+                            <TextField style={{width:"820px"}} color="error" id="outlined-basic" label="Postal code*" variant="outlined" />
+                        </Box>
+
+                        <Box style={{width:"100vx",marginTop:"20px"}}>
+                            <Button variant="contained" size="large" style={{ borderRadius: '10px',backgroundColor:themeColorMain, height:'70px', width: '820px',marginTop:"5px"}}><Text6 style={{color:"white"}}>Get a Demo</Text6></Button>
+                        </Box>
+                        <img alt=""
+                            src="req-text.svg"
+                            style={{marginTop:"20px"}}
+                        />
+                    </Paper>
+            </Box>
+
+            <Box style={{width:"10vx", backgroundColor:"#0A0A0A", height:"420px", marginTop:"530px"}}>
+            <img alt=""
+                    src="/TechCafe-Footer.svg"
+
+                />
             </Box>
         </Box>
     )
