@@ -10,9 +10,9 @@ export default function Intro() {
             <Container style={{"padding-top" : "150px", "float" : "center"}} fluid>
                 <Row>
                     <Col xs={5} style={{"padding" : "100px 0px 0px 200px"}}>
-                        <h1 style={{"fontSize" : "56px"}}><b>Fast order and pay for restaurants</b></h1>
+                        <h1 style={{"fontSize" : "56px"}}><b>{global.config.scriptMode === 1? "日本語": "order and pay for restaurants"}</b></h1>
                         <br />
-                        <p style={{"fontSize" : "24px"}}>Become more profitable by simplifying the restaurant experience for your customers.</p>
+                        <p style={{"fontSize" : "24px"}}>{global.config.scriptMode === 1? "japanchwiudhowhedw" : "Become more profitable by simplifying the restaurant experience for your customers." }</p>
                         <br />
                         <div>
                             <Button variant='danger'>Try the Demo</Button><span style={{"padding-left" : "20px"}}><Button variant='outline-secondary'>Contact Us</Button></span>
