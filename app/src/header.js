@@ -13,6 +13,8 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 
+const SF_STYLE = "'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
+
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
@@ -36,10 +38,14 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static"style={{backgroundColor:"#D41E1E"}}>
+    <AppBar position="static"style={{backgroundColor:"#FFFFFF"}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters >
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <img alt=""
+                 src="/TechCafe_logo.png"
+                 style={{height:"30px"}}
+            />
           <Typography
             variant="h6"
             noWrap
@@ -48,16 +54,16 @@ function ResponsiveAppBar() {
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
+              fontFamily: SF_STYLE,
               fontWeight: 700,
-              color: 'inherit',
+              color: '#D41E1E',
               textDecoration: 'none',
             }}
           >
             TechCafe
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }}}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -112,19 +118,25 @@ function ResponsiveAppBar() {
           >
             LOGO
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{flexGrow: 1}}
               >
+                <Typography  sx={{  color: '#616161', display: 'block' ,
+                            fontFamily:SF_STYLE,
+                            textTransform: 'none'}}
+                >
                 {page}
+                </Typography>
+
               </Button>
             ))}
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
+          <Box sx={{ flexGrow: 20 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />

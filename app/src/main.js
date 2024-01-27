@@ -6,6 +6,7 @@ import SendIcon from '@mui/icons-material/Send';
 import Paper from '@mui/material/Paper';
 import TextField from '@mui/material/TextField';
 
+const SF_STYLE = "'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -94,9 +95,9 @@ const stepsForWorking = [
                     height: '48px',
                     marginTop: '20px',
                     marginLeft: '25px',
-                    fontFamily: 'SF Pro',
+                    fontFamily: SF_STYLE,
                     fontWeight: 400,
-                    fontSize: '25px',
+                    fontSize: '20px',
                     lineHeight: '23.87px',
                 }}>Customers scan an NFC tag and order food through an online menu </div>
         </Box>
@@ -126,9 +127,9 @@ const stepsForWorking = [
                     height: '48px',
                     marginTop: '20px',
                     marginLeft: '25px',
-                    fontFamily: 'SF Pro',
+                    fontFamily: SF_STYLE,
                     fontWeight: 400,
-                    fontSize: '25px',
+                    fontSize: '20px',
                     lineHeight: '23.87px',
                 }}>Handle all their orders through your POS tablet screen</div>
         </Box>
@@ -158,9 +159,9 @@ const stepsForWorking = [
                 height: '48px',
                 marginTop: '20px',
                 marginLeft: '25px',
-                fontFamily: 'SF Pro',
+                fontFamily: SF_STYLE,
                 fontWeight: 400,
-                fontSize: '25px',
+                fontSize: '20px',
                 lineHeight: '23.87px',
             }}>Your customers pay for their food, online or in-person</div>
     </Box>
@@ -203,9 +204,13 @@ function body() {
                         '& button': { m: 1 }
                     }}
                         style={{justifyContent: 'flex-end'}}
-                    >   <Button variant="contained" size="large" style={{backgroundColor:themeColorMain, height:'62px', width: '190px'}}>Try the Demo</Button>
+                    >   <Button variant="contained" size="large" style={{backgroundColor:themeColorMain, height:'62px', width: '190px',textTransform: 'none', fontSize:"20px",
+                            fontFamily:SF_STYLE,
+                            }}>Try the Demo</Button>
                         <Button variant="outlined" size="large"  endIcon={<SendIcon />}
-                            style={{outlineColor:themeColorMain, color:"grey", border: '2px solid', height:'62px', width: '190px', marginLeft: '20px'}}>Contact us</Button>
+                            style={{outlineColor:themeColorMain, color:"grey", border: '2px solid', height:'62px', width: '190px', marginLeft: '20px', textTransform: 'none',fontSize:"20px",
+                            fontFamily: SF_STYLE,
+                            }}>Contact us</Button>
                      </Box>
                 </Paper>
 
@@ -307,7 +312,7 @@ function body() {
                         style={{marginLeft:"80px",marginTop:"40px"}}
                     />
                     </Box>
-                <Button variant="contained" size="large" style={{backgroundColor:themeColorMain, height:'62px', width: '300px',marginTop:"30px",marginLeft:"-50px"}}>Buy Now *Starting from 299$</Button>
+                <Button variant="contained" size="large" style={{backgroundColor:themeColorMain, height:'62px', width: '300px',marginTop:"30px",marginLeft:"-50px",fontFamily:SF_STYLE,textTransform:"none"}}>Buy Now *Starting from 299$</Button>
                 </Box>
             </Box>
 
@@ -354,7 +359,7 @@ function body() {
                         </Box>
 
                         <Box style={{width:"100vx",marginTop:"20px"}}>
-                            <Button variant="contained" size="large" style={{ borderRadius: '10px',backgroundColor:themeColorMain, height:'70px', width: '820px',marginTop:"5px"}}><Text6 style={{color:"white"}}>Get a Demo</Text6></Button>
+                            <Button variant="contained" size="large" style={{ borderRadius: '10px',backgroundColor:themeColorMain, height:'70px', width: '820px',marginTop:"5px",fontFamily:SF_STYLE,textTransform:"none"}}><Text6 style={{color:"white"}}>Get a Demo</Text6></Button>
                         </Box>
                         <img alt=""
                             src="req-text.svg"
