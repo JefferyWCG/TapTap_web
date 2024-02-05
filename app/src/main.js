@@ -5,12 +5,15 @@ import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import Paper from '@mui/material/Paper';
 import TextField from '@mui/material/TextField';
+import  { useRef, useState } from 'react';
+import POS from './components/POS';
 
 const SF_STYLE = "'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 const themeColorMain="#D41E1E"
+
 
 const Text1 = styled.div`
     font-family: 'SF Pro', sans-serif;
@@ -108,7 +111,7 @@ const stepsForWorking = [
         height: "694px",
         margin: "20px"
     }}>
-        <Text3 style={{color:"#E0E0E0"}}>Step1</Text3>
+        <Text3 style={{color:"#E0E0E0"}}>Step2</Text3>
         <Box sx={{
             width: "430px",
             height: "604px",
@@ -140,7 +143,7 @@ const stepsForWorking = [
     height: "694px",
     margin: "20px"
 }}>
-    <Text3 style={{color:"#E0E0E0"}}>Step1</Text3>
+    <Text3 style={{color:"#E0E0E0"}}>Step3</Text3>
     <Box sx={{
         width: "430px",
         height: "604px",
@@ -168,7 +171,26 @@ const stepsForWorking = [
 </Box>,
 ]
 
-function body() {
+function Body() {
+    const contactUs_target = useRef(null);
+    const [firstNameInput, setFirstNameInput] = useState(undefined);
+    const [lastNameInput, setLastNameInput] = useState(undefined);
+    const [emailInput, setEmailInput] = useState(undefined);
+    const [phoneNumInput, setPhoneNumInput] = useState(undefined);
+    const [restaurantNameInput, setRestaurantNameInput] = useState(undefined);
+    const [postalCodeInput, setPostalCodeInput] = useState(undefined);
+
+    const getDemoInput = {
+        firstNameInput,
+        lastNameInput,
+        emailInput,
+        phoneNumInput,
+        restaurantNameInput,
+        postalCodeInput
+    }
+
+
+
     return(
         <Box sx={{
                 width: '100vw',
@@ -208,6 +230,12 @@ function body() {
                             fontFamily:SF_STYLE,
                             }}>Try the Demo</Button>
                         <Button variant="outlined" size="large"  endIcon={<SendIcon />}
+                            onClick = {()=>{
+                                if (contactUs_target.current) {
+                                    // Scroll to the target element
+                                    contactUs_target.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                  }
+                            }}
                             style={{outlineColor:themeColorMain, color:"grey", border: '2px solid', height:'62px', width: '190px', marginLeft: '20px', textTransform: 'none',fontSize:"20px",
                             fontFamily: SF_STYLE,
                             }}>Contact us</Button>
@@ -276,10 +304,11 @@ function body() {
                  src="/About_Mobile Menu_Section Animated.svg"
                  style={{marginTop:"120px"}}
             />
+              <POS style={{marginLeft:"1000px",position: 'absolute'}}/>
 
             <img alt=""
                  src="/About_POS_Section.svg"
-                 style={{marginTop:"120px"}}
+                 style={{}}
             />
             <Box sx={{
                     display: 'flex',
@@ -293,6 +322,7 @@ function body() {
                     src="iPad_Mini.svg"
                     style={{marginTop:"120px", marginLeft:"-140px"}}
                 />
+
                 <Box sx={{
                     marginTop:"250px",
                     height: "750px",
@@ -322,7 +352,7 @@ function body() {
                     marginTop: "100px"
                 }}
             >
-                <Text4 style={{}}>Are You A Restaurant Owner? Join Us Today!</Text4>
+                <Text4 ref={contactUs_target}  style={{}}>Are You A Restaurant Owner? Join Us Today!</Text4>
                 <Paper elevation={10}
                     sx={{
                         padding:"25px",
@@ -338,28 +368,52 @@ function body() {
                             justifyContent: 'center',
                             marginTop: "30px"
                         }}>
-                            <TextField style={{width:"400px"}} color="error" id="outlined-basic" label="First name*" variant="outlined" />
-                            <TextField style={{width:"400px", marginLeft:"20px"}} color="error" id="outlined-basic" label="Last name*" variant="outlined" />
+                            <TextField style={{width:"400px"}} color="error" id="outlined-basic" label="First name*" variant="outlined"
+                                onChange={(e)=>{
+                                    setFirstNameInput(e.target.value);
+                                }}
+                            />
+                            <TextField style={{width:"400px", marginLeft:"20px"}} color="error" id="outlined-basic" label="Last name*" variant="outlined"
+                                onChange={(e)=>{
+                                    setLastNameInput(e.target.value);
+                                }}
+                            />
                         </Box>
 
                         <Box style={{width:"100vx", marginTop:"20px"}}>
-                            <TextField style={{width:"820px"}} color="error" id="outlined-basic" label="Email*" variant="outlined" />
+                            <TextField style={{width:"820px"}} color="error" id="outlined-basic" label="Email*" variant="outlined"
+                                onChange={(e)=>{
+                                    setEmailInput(e.target.value);
+                                }}
+                            />
                         </Box>
 
                         <Box style={{width:"100vx",marginTop:"20px"}}>
-                            <TextField style={{width:"820px"}} color="error" id="outlined-basic" label="Phone number*" variant="outlined" />
+                            <TextField style={{width:"820px"}} color="error" id="outlined-basic" label="Phone number*" variant="outlined"
+                                onChange={(e)=>{
+                                    setPhoneNumInput(e.target.value);
+                                }}
+                            />
                         </Box>
 
                         <Box style={{width:"100vx",marginTop:"20px"}}>
-                            <TextField style={{width:"820px"}} color="error" id="outlined-basic" label="Restaurant name*" variant="outlined" />
+                            <TextField style={{width:"820px"}} color="error" id="outlined-basic" label="Restaurant name*" variant="outlined"
+                                onChange={(e)=>{
+                                    setRestaurantNameInput(e.target.value);
+                                }}
+                            />
                         </Box>
 
                         <Box style={{width:"100vx",marginTop:"20px"}}>
-                            <TextField style={{width:"820px"}} color="error" id="outlined-basic" label="Postal code*" variant="outlined" />
+                            <TextField style={{width:"820px"}} color="error" id="outlined-basic" label="Postal code*" variant="outlined"
+                                onChange={(e)=>{
+                                    setPostalCodeInput(e.target.value);
+                                }}
+                            />
                         </Box>
 
                         <Box style={{width:"100vx",marginTop:"20px"}}>
-                            <Button variant="contained" size="large" style={{ borderRadius: '10px',backgroundColor:themeColorMain, height:'70px', width: '820px',marginTop:"5px",fontFamily:SF_STYLE,textTransform:"none"}}><Text6 style={{color:"white"}}>Get a Demo</Text6></Button>
+                            <Button onClick={()=>{console.log(getDemoInput)}} variant="contained" size="large" style={{ borderRadius: '10px',backgroundColor:themeColorMain, height:'70px', width: '820px',marginTop:"5px",fontFamily:SF_STYLE,textTransform:"none"}}><Text6 style={{color:"white"}}>Get a Demo</Text6></Button>
                         </Box>
                         <img alt=""
                             src="req-text.svg"
@@ -378,4 +432,4 @@ function body() {
     )
 }
 
-export default body;
+export default Body;

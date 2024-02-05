@@ -43,8 +43,8 @@ function ResponsiveAppBar() {
         <Toolbar disableGutters >
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <img alt=""
-                 src="/TechCafe_logo.png"
-                 style={{height:"30px"}}
+                 src="/TechCafe_logo2.png"
+                 style={{height:"45px"}}
             />
           <Typography
             variant="h6"
@@ -58,6 +58,7 @@ function ResponsiveAppBar() {
               fontWeight: 700,
               color: '#D41E1E',
               textDecoration: 'none',
+              fontSize:"25px"
             }}
           >
             TechCafe
