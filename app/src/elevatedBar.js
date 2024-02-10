@@ -8,8 +8,13 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Main from './main.js';
+import  { useState } from 'react';
 
+const {ENGLISH, JAPANESE} = require("./scripts/text.js")
 function ElevationScroll(props) {
+
+  //adding switching languages function
+
   const { children, window } = props;
   // Note that you normally won't need to set the window ref as useScrollTrigger
   // will default to window.
@@ -35,19 +40,21 @@ ElevationScroll.propTypes = {
 };
 
 export default function ElevateAppBar(props) {
+  const [scripts, setScripts] = useState(ENGLISH);
+
   return (
     <React.Fragment>
       <CssBaseline />
       <ElevationScroll {...props}>
         <AppBar>
-          <Toolbar>
+          <Toolbar scripts ={scripts} setScripts ={setScripts} >
             <Typography variant="h6" component="div">
               Scroll to elevate App bar
             </Typography>
           </Toolbar>
         </AppBar>
       </ElevationScroll>
-     <Main/>
+     <Main scripts ={scripts} setScripts ={setScripts}/>
     </React.Fragment>
   );
 }
