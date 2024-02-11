@@ -27,7 +27,7 @@ function Page({scripts,contactUs_target,Text4,Text6,themeColorMain,setFirstNameI
             width: '908px',
             height: '670px',
             marginTop: '30px',
-            marginLeft:"340px",
+            marginLeft:"270px",
             gap: '36px',
             borderRadius: '40px',
         }}>

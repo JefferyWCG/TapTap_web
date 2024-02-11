@@ -7,20 +7,20 @@ import Button from '@mui/material/Button';
 const Text1 = styled.div`
     font-family: 'SF Pro', sans-serif;
     font-weight: 700;
-    font-size: 59px;
+    font-size: 56px;
     line-height: 60px;
     letter-spacing: -3px;
-    width: 508px;
+    width: 488px;
     height: 120px;
 `;
 
 const Text2 = styled.div`
     font-family: 'SF Pro', sans-serif;
     font-weight: 400;
-    font-size: 26px;
+    font-size: 24px;
     line-height: 28.64px;
-    width: 498px;
-    height: 120px;
+    width: 488px;
+    height: 58px;
 `;
 
 function Page({scripts, themeColorMain,contactUs_target, SendIcon,SF_STYLE}){
@@ -28,7 +28,7 @@ function Page({scripts, themeColorMain,contactUs_target, SendIcon,SF_STYLE}){
         <Box sx={{
             display: 'flex',
             width: '100vw',
-            height: "714px",
+            height: "717px",
             justifyContent: 'center',
             flexDirection: 'row',
         }}
@@ -40,7 +40,8 @@ function Page({scripts, themeColorMain,contactUs_target, SendIcon,SF_STYLE}){
                 height: '380px',
                 marginTop: '214px',
                 gap: '36px',
-                justifyContent: 'left'
+                justifyContent: 'left',
+                marginLeft:"50px"
             }}
         >
             <Text1  style={{alignItems: 'left'}}>{scripts.body.Hero.caption}</Text1>
@@ -49,7 +50,7 @@ function Page({scripts, themeColorMain,contactUs_target, SendIcon,SF_STYLE}){
                 width: '434px',
                 height: '56px',
                 justifyContent: 'flex-end',
-                marginTop: '-30px',
+                marginTop: '30px',
                 '& button': { m: 1 }
             }}
                 style={{justifyContent: 'flex-end'}}
@@ -70,26 +71,22 @@ function Page({scripts, themeColorMain,contactUs_target, SendIcon,SF_STYLE}){
         </Paper>
 
         <Box sx={{
-            width: "780px",
-            height: "634px",
+            width: "756px",
+            height: "566px",
             marginTop: '169px',
-            marginLeft: '90px',
-        //  border: '1px solid #ccc',
+            marginLeft: '40px',
+          //border: '1px solid #ccc',
             display: 'flex',
         }}
         >
         <img alt=""
                 src="/iPhone13.svg"
-                width="582px"
-                height="584px"
                 position="absolute"
                 style={{position:"absolute"}}
 
             />
             <img alt=""
                 src="/POS_Mockup_Register.svg"
-                width="805px"
-                height="616px"
                 style={{marginLeft: "120px"}}
             />
         </Box>

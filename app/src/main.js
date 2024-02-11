@@ -12,6 +12,7 @@ import Hero from './pages/hero';
 import HowOurTechWork from './pages/howOurTechWork.js';
 import DontHaveTable from './pages/dontHaveTablet.js';
 import ContactUs from './pages/contactUs.js';
+import NFCMobileMenu from './pages/NFCMobileMenu.js';
 
 
 const {ENGLISH, JAPANESE} = require("./scripts/text.js")
@@ -27,26 +28,29 @@ const themeColorMain="#D41E1E"
 const Text3 =  styled.div`
     font-family: 'SF Pro', sans-serif;
     font-weight: 700;
-    font-size: 40px;
+    font-size: 36px;
     line-height: 44px;
     width: -2;
-    align: center
+    align: center;
+    letter-spacing: -1.5px;
 `;
 const Text4 =  styled.div`
     font-family: 'SF Pro', sans-serif;
     font-weight: 700;
-    font-size: 39px;
+    font-size: 35px;
     line-height: 44px;
     width: -2;
     align: center;
-    letter-spacing: -1px;
+    letter-spacing: -1.5px;
 `;
 
 const Text5 =  styled.div`
     font-family: 'SF Pro', sans-serif;
     font-weight: 400;
-    font-size: 26px;
-    line-height: 30px;
+    font-size: 23.5px;
+    line-height: 28.64px;
+    letter-spacing: -0.3px;
+
 `;
 
 const Text6 =  styled.div`
@@ -71,28 +75,28 @@ function Body({scripts, setScripts}) {
 
     const stepsForWorking = [
         <Box sx={{
-            width: "420px",
-            height: "694px",
+            width: "382px",
+            height: "655px",
             margin: "20px"
         }}>
             <Text3 style={{color:"#E0E0E0"}}>{scripts.body.HowOurTechWork.step1}</Text3>
             <Box sx={{
-                width: "430px",
-                height: "604px",
+                width: "382px",
+                height: "551px",
                 backgroundColor:"#FFFFFF",
-                marginTop: "70px",
+                marginTop: "45px",
                 "border-radius": "12px;"
             }}>
                 <img alt=""
                      src="/Step_1_Image.svg"
-                    style={{marginLeft:"-80px",marginTop:"20px"}}
+                    style={{marginLeft:"-80px",marginTop:"20px", height:"419px"}}
                 />
                 <div
                     className="nfc-tag"
                     style={{
-                        width: '370px',
+                        width: '335px',
                         height: '48px',
-                        marginTop: '20px',
+                        marginTop: '10px',
                         marginLeft: '25px',
                         fontFamily: SF_STYLE,
                         fontWeight: 400,
@@ -103,28 +107,28 @@ function Body({scripts, setScripts}) {
         </Box>,
 
     <Box sx={{
-            width: "420px",
-            height: "694px",
-            margin: "20px"
+            width: "382px",
+            height: "655px",
+            margin: "10px"
         }}>
             <Text3 style={{color:"#E0E0E0"}}>{scripts.body.HowOurTechWork.step2}</Text3>
             <Box sx={{
-                width: "430px",
-                height: "604px",
+                width: "382px",
+                height: "551px",
                 backgroundColor:"#FFFFFF",
-                marginTop: "70px",
+                marginTop: "55px",
                 "border-radius": "12px;"
             }}>
                 <img alt=""
                      src="/Pop-Image.svg"
-                    style={{marginLeft:"-80px",marginTop:"15px"}}
+                    style={{marginLeft:"-76px",marginTop:"15px",height:"411px"}}
                 />
                 <div
                     className="nfc-tag"
                     style={{
-                        width: '370px',
+                        width: '325px',
                         height: '48px',
-                        marginTop: '20px',
+                        marginTop: '24px',
                         marginLeft: '25px',
                         fontFamily: SF_STYLE,
                         fontWeight: 400,
@@ -135,28 +139,27 @@ function Body({scripts, setScripts}) {
         </Box>,
 
     <Box sx={{
-        width: "420px",
-        height: "694px",
-        margin: "20px"
+        width: "382px",
+        height: "655px",
     }}>
         <Text3 style={{color:"#E0E0E0"}}>{scripts.body.HowOurTechWork.step3}</Text3>
         <Box sx={{
-            width: "430px",
-            height: "604px",
+            width: "382px",
+            height: "551px",
             backgroundColor:"#FFFFFF",
-            marginTop: "70px",
+            marginTop: "65px",
             "border-radius": "12px;"
         }}>
             <img alt=""
                  src="/Pop-Image3.svg"
-                style={{marginLeft:"-80px",marginTop:"-40px"}}
+                style={{marginLeft:"-70px",marginTop:"-35px",height:"457px"}}
             />
             <div
                 className="nfc-tag"
                 style={{
-                    width: '370px',
+                    width: '335px',
                     height: '48px',
-                    marginTop: '20px',
+                    marginTop: '25px',
                     marginLeft: '25px',
                     fontFamily: SF_STYLE,
                     fontWeight: 400,
@@ -176,34 +179,25 @@ function Body({scripts, setScripts}) {
         postalCodeInput
     }
 
-
-
     return(
 
         <Box sx={{
-                width: '100vw',
+                width: '100vx',
                 justifyContent: 'center', // Center horizontally
                 border: '1px solid #ccc',
-            }}
-        >
+            }}>
             <Hero scripts = {scripts} themeColorMain = {themeColorMain} SF_STYLE = {SF_STYLE}
                     SendIcon = {SendIcon} contactUs_target = {contactUs_target}
             ></Hero>
 
             <HowOurTechWork scripts={scripts} stepsForWorking = {stepsForWorking}></HowOurTechWork>
 
+            <NFCMobileMenu scripts={scripts}  Text3 = {Text3} Text4 = {Text4} Text5 = {Text5}></NFCMobileMenu>
 
-            <img alt=""
-                 src="/About_Mobile Menu_Section Animated.svg"
-                 style={{marginTop:"120px"}}
-            />
 
-            <AboutPOS scripts ={scripts} setScripts ={setScripts} style={{marginLeft:"1000px",position: 'absolute'}}/>
+            <AboutPOS scripts ={scripts} setScripts ={setScripts} Text4 = {Text4}  Text5 = {Text5} />
 
-            <img alt=""
-                 src="/About_POS_Section.svg"
-                 style={{}}
-            />
+
 
             <DontHaveTable scripts = {scripts} Text4 = {Text4} Text5 = {Text5} SF_STYLE = {SF_STYLE} themeColorMain = {themeColorMain} ></DontHaveTable>
 

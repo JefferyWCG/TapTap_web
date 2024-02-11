@@ -5,7 +5,7 @@ import styled from '@emotion/styled';
 const Text3 =  styled.div`
     font-family: 'SF Pro', sans-serif;
     font-weight: 700;
-    font-size: 40px;
+    font-size: 36px;
     line-height: 44px;
     width: -2;
     align: center
@@ -30,7 +30,7 @@ function Page({scripts, stepsForWorking}){
                 <Text3 style={{color:"#FFFFFF", marginTop:"60px"}}>{scripts.body.HowOurTechWork.caption}</Text3>
                 <Box
                     sx={{
-                        width:"1400px",
+                        width:"1200px",
                         height:"664px",
                         marginTop:"30px",
                         // border: '1px solid #ccc',

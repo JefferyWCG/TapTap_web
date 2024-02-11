@@ -45,7 +45,7 @@ export default function ElevateAppBar(props) {
   return (
     <React.Fragment>
       <CssBaseline />
-      <ElevationScroll {...props}>
+      <ElevationScroll style={{}} nestedScrollEnabled = {true} {...props}>
         <AppBar>
           <Toolbar scripts ={scripts} setScripts ={setScripts} >
             <Typography variant="h6" component="div">
@@ -54,7 +54,8 @@ export default function ElevateAppBar(props) {
           </Toolbar>
         </AppBar>
       </ElevationScroll>
-     <Main scripts ={scripts} setScripts ={setScripts}/>
+
+     <Main style={{height:"500px",outerHeight:"500px",innerHeight:"500px"}} scripts ={scripts} setScripts ={setScripts}/>
     </React.Fragment>
   );
 }

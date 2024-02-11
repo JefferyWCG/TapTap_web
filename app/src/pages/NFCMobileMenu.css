@@ -1,0 +1,28 @@
+
+section {
+  transition: opacity 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+#section1 {
+  opacity: 1;
+  width: 100%;
+  height: 978px;
+}
+
+#section2 {
+  opacity: 0;
+  width: 100%;
+  height: 978px;
+}
+
+#section3 {
+  opacity: 0;
+  width: 100%;
+  height: 978px;
+}
+
+.hidden {
+  display: none;
+}

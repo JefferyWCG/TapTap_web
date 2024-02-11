@@ -46,7 +46,7 @@ function ResponsiveAppBar({scripts, setScripts}) {
         <Toolbar disableGutters >
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <img alt=""
-                 src="/TechCafe_logo2.png"
+                 src="/4.png"
                  style={{height:"45px"}}
             />
           <Typography

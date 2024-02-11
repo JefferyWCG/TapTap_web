@@ -66,7 +66,7 @@ function SampleNextArrow1(props) {
     );
   }
 
-function CustomCarousel({scripts, setScripts}) {
+function CustomCarousel({scripts, setScripts,Text4,Text5}) {
   const texts = scripts.body.AboutPOS.carousel;
 
   const settings = {
@@ -90,13 +90,27 @@ function CustomCarousel({scripts, setScripts}) {
     </div>)
   };
   return (
-    <div style={{marginTop:"220px",marginLeft:"20px",position:"absolute"}}>
-        <Paper style={{padding:"50px", height:"330px", width:"550px",marginLeft:"200px", borderRadius: '16px', background: 'linear-gradient(140deg, #ffffff 0%, #f0f0f0 50%, #E3E3E3 100%),0%'}} elevation={3}>
-            <Slider  {...settings}>
-                {texts.map(([text1,text2])=> Card(text1, text2))}
-                {/* More slides */}
-            </Slider>
-      </Paper>
+    <div style={{marginTop:"-90px",marginLeft:"",placeItems: 'center'}}>
+    <img
+        alt=""
+        src="/Red Streak.svg"
+        style={{position:"absolute",marginLeft:"-720px",marginTop:"55px", "z-index":"-1000"}}
+    />
+        <Text4>{scripts.body.AboutPOS.caption}</Text4>
+        <Text5 style={{width:"444px",marginLeft:"500px",marginTop:"25px"}}>{scripts.body.AboutPOS.subCaption}</Text5>
+        <Box  style={{ display: 'flex', marginTop:"95px",marginLeft:"-50px"}}>
+            <Paper style={{ opacity:0.9,"backdrop-filter": 'blur(1000px)' ,padding:"40px", height:"310px", width:"520px",marginLeft:"200px", borderRadius: '16px', background: 'linear-gradient(140deg, #ffffff 0%, #f0f0f0 50%, #E3E3E3 100%),0%'}} elevation={3}>
+                <Slider  {...settings}>
+                    {texts.map(([text1,text2])=> Card(text1, text2))}
+                    {/* More slides */}
+                </Slider>
+            </Paper>
+            <img
+                alt=""
+                src="/POS_Mock_Table_Editor-transformed 1.svg"
+                style={{marginLeft:"45px",marginTop:"-40px"}}
+            />
+        </Box>
     </div>
   );
 }
