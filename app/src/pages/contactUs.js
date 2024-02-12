@@ -31,7 +31,7 @@ function Page({scripts,contactUs_target,Text4,Text6,themeColorMain,setFirstNameI
             gap: '36px',
             borderRadius: '40px',
         }}>
-            <Text6 style={{marginLeft: '-400px', marginTop:"20px"}}>{scripts.body.ContactUs.text2}</Text6>
+            <Text6 style={{marginLeft: scripts.language == "ENGLISH"? '-400px' : "-50px", marginTop:"20px"}}>{scripts.body.ContactUs.text2}</Text6>
             <Box sx={{
                 justifyContent: 'center',
                 marginTop: "30px"

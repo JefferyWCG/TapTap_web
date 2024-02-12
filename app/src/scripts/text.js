@@ -1,9 +1,10 @@
 
 
 const ENGLISH={
+    language:"ENGLISH",
     header:{
-        TechCafe:"TechCafe",
-        pages:['Products', 'Pricing', 'Blog'],
+        TechCafe:"TapTap",
+        pages:[],//'Products', 'Pricing', 'Blog'
     },
     body:{
         Hero:{
@@ -13,7 +14,7 @@ const ENGLISH={
             button2:"Contact us",
         },
         HowOurTechWork:{
-            caption:"How Our Tech Works",
+            caption:"How TapTap Works",
             step1:"Step 1",
             text1:"Customers scan an NFC tag and order food through an online menu",
             step2:"Step 2",
@@ -22,7 +23,7 @@ const ENGLISH={
             text3:"Your customers pay for their food, online or in-person",
         },
         NFCMobileMenu:{
-            caption:"NFC Mobile Menu",
+            caption:"TapTap Mobile Ordering",
             detail:["With just one tap, customers can order food through your online menu. With our NFC technology, you’ll never have to worry about outsiders messing with your orders.",
             "Your customers won’t waste time downloading apps (they already have enough). It’s all on their browser.",
             "Group dining has never been easier. No more complex calculations. Friends can easily split the bill evenly or pay for their items. Effortlessly navigate through our meal with utmost ease. "
@@ -32,18 +33,18 @@ const ENGLISH={
         },
         AboutPOS:{
             caption:"POS System",
-            subCaption:"Our smart register is still in the making, here’s what we have so far",
+            subCaption:"Our smart register is always upgrading, here’s what we have so far",
             carousel:[
                 ["Order Details",
                 "Access customer's comprehensive order details instantly. Serve with precision and exceed expectations"
                 ],
-                ["Table layout",
+                ["Table Layout",
                 "You’ll never miss a table’s order with our colors indicating table status. Customize the layout to look like your restaurant"
                 ],
-                [ "Edit order with Ease",
+                [ "Edit Order with Ease",
                    "Mistakes happen, but with our system, they’re easy to fix. Quickly update to ensure a flawless dining experience"
                 ],[
-                    "Dynamic Sales and insights",
+                    "Dynamic Sales and Insights",
                     "Gain an unfair advantage with our Sales and Revenue metrics tool. It’s not just numbers; it’s the secret behind your restaurant’s prosperity"
                 ]
             ],
@@ -51,6 +52,7 @@ const ENGLISH={
         DontHaveTable:{
             text1:"Don't Have A Tablet?",
             text2:"We got you covered",
+            tableSpec:"Tablet Specs",
             button:"Buy Now *Starting from 299$",
             row1:["Price","Size","Brand","Internal Storage","Network Type"],
             row2:["$299","25.9 cm","Apple","64 GB","WiFi"]
@@ -70,65 +72,67 @@ const ENGLISH={
 }
 
 const JAPANESE = {
+    language:"JAPANESE",
     header: {
-        TechCafe: "TechCafe",
-        pages: ['製品', '価格', 'ブログ'],
+        TechCafe: "TapTap",
+        pages: [],//'製品', '企業情報', 'ブログ'
     },
     body: {
         Hero: {
-            caption: "レストランの迅速な注文と支払い",
-            subCaption: "顧客のレストラン体験を簡素化することで、より収益性を高めます。",
-            button1: "デモを試す",
+            caption: "飲食店のための注文と支払いシステム",
+            subCaption: "無駄のない飲食店経営で収益を向上",
+            button1: "申し込む",
             button2: "お問い合わせ",
         },
         HowOurTechWork: {
-            caption: "私たちの技術の仕組み",
+            caption: "TapTapの機能",
             step1: "ステップ 1",
-            text1: "顧客がNFCタグをスキャンして、オンラインメニューから食べ物を注文する",
+            text1: "テーブルに設置されたNFCタグにスマホをかざすとメニューが表示され注文することができます。",
             step2: "ステップ 2",
-            text2: "POSタブレット画面を通じて、すべての注文を処理する",
+            text2: "飲食店は全てのメニューや注文をタブレット上のPOSシステムから簡単に管理する事ができます。",
             step3: "ステップ 3",
-            text3: "顧客が食べ物の支払いをオンラインまたは対面で行う",
+            text3: "飲食店員の介入なしにスマホから安全に支払いを行うことができます。",
         },
         NFCMobileMenu: {
-            caption: "NFCモバイルメニュー",
+            caption: "モバイルオーダー&ペイ",
             detail: [
-                "たった一回のタップで、顧客はオンラインメニューを通じて食べ物を注文できます。当社のNFC技術を使用すれば、注文を外部の人にいじられる心配はありません。",
-                "顧客はアプリをダウンロードする時間を無駄にしません（彼らはすでに十分に持っています）。すべてが彼らのブラウザ上にあります。",
-                "グループでの食事がこれまでになく簡単になりました。もう複雑な計算は必要ありません。友達が簡単に勘定を均等に分けたり、自分のアイテムを支払ったりできます。最大限の簡単さで私たちの食事を楽しむことができます。"
+                "多言語に対応したメニューにより、海外からのお客様への対応が可能です。",
+                "お客様はスマートフォンにアプリを追加する必要はありません。全てのサービスはウェブ上で利用可能です。",
+                "TapTapを利用することで、安全かつ容易に割り勘を行ったり、個々が注文した品目のみを支払うことができます。"
             ],
-            animation: ["高速＆安全", "アプリなし、すべてウェブ", "カスタムペイ"]
+            animation: ["外国語対応", "全てがウェブ上", "簡単に割り勘"]
         },
         AboutPOS: {
-            caption:"POS System",
-            subCaption:"Our smart register is still in the making, here’s what we have so far",
+            caption:"POSシステム",
+            subCaption:"最先端の注文管理システムで、飲食店の効率を向上",
             carousel: [
-                ["注文詳細", "顧客の詳細な注文情報に即座にアクセス。精度を持って提供し、期待を超える"],
-                ["テーブルレイアウト", "色でテーブルのステータスを示すことで、テーブルの注文を見逃すことはありません。レストランに似せたレイアウトをカスタマイズする"],
-                ["注文の簡単な編集", "ミスは発生しますが、当社のシステムでは簡単に修正できます。完璧な食事体験を確実にするために迅速に更新する"],
-                ["ダイナミックセールスとインサイト", "セールスおよび収益メトリクスツールを使って不公平なアドバンテージを獲得します。それは単なる数字ではなく、あなたのレストランの繁栄の秘密です"]
+                ["カスタマイズ", "飲食店の各テーブルの配置をPOSシステムに反映させます。これにより、店内の状況をリアルタイムで確認でき、運営の効率化を図れます。"],
+                ["注文詳細", "注文詳細に即座にアクセスでき、顧客の特別なリクエストや食事の好みを理解することができます。これにより、正確にサービスを提供し期待を超える飲食店体験を実現します。"],
+                ["簡単に注文の編集", "注文に誤りがあった際にも、簡単に注文内容を修正できます。これにより、お客様と飲食店の双方にとってストレスフリーな体験を実現します。"],
+                ["売上と収益の洞察", "当社提供の売上及び収益分析ツールを活用することで、店舗の運営を効率的に分析し、売上と収益性の可視化を実現します。"]
             ],
         },
         DontHaveTable: {
-            text1: "タブレットを持っていない？",
-            text2: "私たちが対応します",
-            button: "今すぐ購入 *299ドルから",
-            row1: ["価格", "サイズ", "ブランド", "内部ストレージ", "ネットワークタイプ"],
-            row2: ["$299", "25.9 cm", "Apple", "64 GB", "WiFi"]
+            text1: "タブレットがない方へ",
+            text2:"タブレットの販売も行っております。",
+            tableSpec:"タブレットについて",
+            button: "今すぐ購入 *2万9800円から",
+            row1: ["価格", "サイズ", "ブランド", "ストレージ", "ネットワーク"],
+            row2: ["2万9800円", "25.9 cm", "Apple", "64 GB", "WiFi"]
         },
         BuyTablet: {
 
         },
         ContactUs: {
-            text1: "レストランのオーナーですか？今日私たちに参加してください！",
-            text2: "このフォームに記入して、私たちと連絡を取ってください",
-            label1: "名前*",
-            label2: "苗字*",
-            label3: "メール*",
+            text1: "飲食店の方へ",
+            text2: "このフォームに記入をしていただき、弊社から案内の連絡ををさせていただきます",
+            label1: "姓*",
+            label2: "名*",
+            label3: "メールアドレス*",
             label4: "電話番号*",
-            label5: "レストラン名*",
+            label5: "店名*",
             label6: "郵便番号*",
-            button1: "デモを取得する",
+            button1: "送信する",
         }
     }
 }

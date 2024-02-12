@@ -92,10 +92,10 @@ function Page({scripts,Text3,Text4,Text5}){
 
     <div className="NFCMobileMenu" style={{height:"2934px"}}>
 
-        <section className="NFCMobileMenu" id="section1" >
+        <section className="NFCMobileMenu" id="section1" style={{marginTop:"20px"}}>
             <Box flexDirection="column">
                 <Text4>{scripts.body.NFCMobileMenu.caption}</Text4>
-                <Box  style={{ display: 'flex',}}>
+                <Box  style={{ display: 'flex',marginTop:"10px"}}>
                 <img style={{marginTop:"20px",marginLeft:"160px"}} alt=""
                         src="/Image Container Elevator1.svg"
                     />
@@ -120,10 +120,10 @@ function Page({scripts,Text3,Text4,Text5}){
                 </Box>
             </Box>
         </section>
-        <section className="NFCMobileMenu"  id="section2" >
-        <Box flexDirection="column">
-                <Text4>{scripts.body.NFCMobileMenu.caption}</Text4>
-                <Box  style={{ display: 'flex',marginTop:"-30px"}}>
+        <section className="NFCMobileMenu"  id="section2" style={{marginTop:"20px"}} >
+        <Box flexDirection="column" >
+                <Text4 style={{"z-index":100000}}>{scripts.body.NFCMobileMenu.caption}</Text4>
+                <Box  style={{ display: 'flex',marginTop:"-20px", "z-index":-1}}>
                 <img style={{marginTop:"20px",marginLeft:"160px"}} alt=""
                         src="/Image Container Elevator.svg"
                     />
@@ -148,10 +148,10 @@ function Page({scripts,Text3,Text4,Text5}){
                 </Box>
             </Box>
         </section>
-        <section className="NFCMobileMenu" id="section3" >
+        <section className="NFCMobileMenu" id="section3" style={{marginTop:"20px" ,"z-index":1}}>
         <Box flexDirection="column">
                 <Text4>{scripts.body.NFCMobileMenu.caption}</Text4>
-                <Box  style={{ display: 'flex',marginTop:"-30px"}}>
+                <Box  style={{ display: 'flex',marginTop:"-20px"}}>
                 <img style={{marginTop:"20px",marginLeft:"160px"}} alt=""
                         src="/Image Container Elevator3.svg"
                     />

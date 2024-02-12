@@ -24,6 +24,12 @@ const Text2 = styled.div`
 `;
 
 function Page({scripts, themeColorMain,contactUs_target, SendIcon,SF_STYLE}){
+    let scrollRef = ()=>{
+        if (contactUs_target.current) {
+            // Scroll to the target element
+            contactUs_target.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
     return(
         <Box sx={{
             display: 'flex',
@@ -47,24 +53,21 @@ function Page({scripts, themeColorMain,contactUs_target, SendIcon,SF_STYLE}){
             <Text1  style={{alignItems: 'left'}}>{scripts.body.Hero.caption}</Text1>
             <Text2 style={{"margin-top":"30px", justifyContent: 'flex-end'}}>{scripts.body.Hero.subCaption}</Text2>
             <Box sx={{
-                width: '434px',
+                width: '494px',
                 height: '56px',
                 justifyContent: 'flex-end',
                 marginTop: '30px',
                 '& button': { m: 1 }
             }}
                 style={{justifyContent: 'flex-end'}}
-            >   <Button variant="contained" size="large" style={{backgroundColor:themeColorMain, height:'62px', width: '190px',textTransform: 'none', fontSize:"20px",
+            >   <Button variant="contained" size="large" style={{marginLeft:"10px",backgroundColor:themeColorMain, height:'62px', width: '190px',textTransform: 'none', fontSize:"20px",
                     fontFamily:SF_STYLE,
-                    }}>{scripts.body.Hero.button1}</Button>
-                <Button variant="outlined" size="large"  endIcon={<SendIcon />}
-                    onClick = {()=>{
-                        if (contactUs_target.current) {
-                            // Scroll to the target element
-                            contactUs_target.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                        }
                     }}
-                    style={{outlineColor:themeColorMain, color:"grey", border: '2px solid', height:'62px', width: '190px', marginLeft: '20px', textTransform: 'none',fontSize:"20px",
+                    onClick ={scrollRef}
+                    >{scripts.body.Hero.button1}</Button>
+                <Button variant="outlined" size="large"  endIcon={<SendIcon />}
+                    onClick ={scrollRef}
+                    style={{outlineColor:themeColorMain, color:"grey", border: '2px solid', height:'62px', width: '200px', marginLeft: '20px', textTransform: 'none',fontSize:"20px",
                     fontFamily: SF_STYLE,
                     }}>{scripts.body.Hero.button2}</Button>
             </Box>

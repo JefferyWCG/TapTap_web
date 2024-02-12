@@ -90,7 +90,7 @@ function CustomCarousel({scripts, setScripts,Text4,Text5}) {
     </div>)
   };
   return (
-    <div style={{marginTop:"-90px",marginLeft:"",placeItems: 'center'}}>
+    <div style={{marginTop:"-50px",marginLeft:"",placeItems: 'center'}}>
     <img
         alt=""
         src="/Red Streak.svg"

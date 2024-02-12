@@ -30,15 +30,16 @@ function Page({scripts,Text4,Text5,SF_STYLE,themeColorMain}){
                 height: "750px",
                 width: "500px",
                 marginLeft:"-40px",
+                "align-items": "flex-start"
             }}>
             <Text4 style={{}}>{scripts.body.DontHaveTable.text1}</Text4>
-            <Text5 style={{marginTop:"22px", marginLeft:"-107px"}}>{scripts.body.DontHaveTable.text2}</Text5>
+            <Text5 style={{marginTop:"22px", marginLeft: scripts.language == "ENGLISH"? "-107px": "60px"}}>{scripts.body.DontHaveTable.text2}</Text5>
             <Grid container spacing={2}>
       {/* If the total columns don't add up to 12, the remaining space will be to the right */}
     </Grid>
             <Grid  container  direction="row" style={{marginTop:"40px",marginLeft:"90px"}} justifyContent="flex-start">
                 <Grid item direction="column" justifyContent="flex-start">
-                    <b style={{marginLeft:"-15px"}}>Tablet Specs</b>
+                    <Grid item style={{textAlign: 'left' }}  xs={3}　>{scripts.body.DontHaveTable.tableSpec}</Grid>
                     {[1,2,3,4,5].map((i) => {
                         return(<Grid item style={{textAlign: 'left' }}  xs={3}>
                         {scripts.body.DontHaveTable.row1[i-1]}

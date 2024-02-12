@@ -18,7 +18,8 @@ const {ENGLISH, JAPANESE} = require("./scripts/text.js")
 
 const SF_STYLE = "'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
 
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const settings = []
+//['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function ResponsiveAppBar({scripts, setScripts}) {
 
@@ -46,8 +47,8 @@ function ResponsiveAppBar({scripts, setScripts}) {
         <Toolbar disableGutters >
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <img alt=""
-                 src="/4.png"
-                 style={{height:"45px"}}
+                 src="/2.png"
+                 style={{height:"45px",marginTop:"6px"}}
             />
           <Typography
             variant="h6"
@@ -141,11 +142,11 @@ function ResponsiveAppBar({scripts, setScripts}) {
             ))}
           </Box>
           <Box sx={{ flexGrow: 20 }}>
-            <Tooltip title="Open settings">
+           {/*<Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
               </IconButton>
-            </Tooltip>
+            </Tooltip>*/}
             <Menu
               sx={{ mt: '45px' }}
               id="menu-appbar"
@@ -169,7 +170,7 @@ function ResponsiveAppBar({scripts, setScripts}) {
               ))}
             </Menu>
           </Box>
-          <ButtonGroup variant="text" aria-label="Basic button group" color="primary">
+          <ButtonGroup variant="text" aria-label="Basic button group" color="error">
                 <Button color="error" onClick={ () => {setScripts(ENGLISH); console.log(scripts)}}>EN</Button>
                 <Button color="error" onClick={ () => {setScripts(JAPANESE); console.log(scripts)}}>JP</Button>
               </ButtonGroup>
