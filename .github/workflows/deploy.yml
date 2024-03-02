@@ -15,7 +15,7 @@ jobs:
       with:
         node-version: '21.6.1'  # Set the Node.js version according to your project requirements
     - name: List
-      run: cd/app
+      run: cd app
 
     - name: Install Dependencies
       run: npm install
