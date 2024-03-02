@@ -32,8 +32,8 @@ function Page({scripts,Text3,Text4,Text5}){
           const section3 = document.getElementById('section3');
 
           const scrollPosition = window.scrollY-1550.5;
-          const height = window.innerHeight*5;
-          const pageSlice = 4
+          const height = window.innerHeight*3;
+          const pageSlice = 5
           const transitionSlice = 1
           let total_slice = (pageSlice*3+transitionSlice*2)*2
 
@@ -65,7 +65,7 @@ function Page({scripts,Text3,Text4,Text5}){
           }
 
 
-          if(scrollPosition >0 && scrollPosition<1960){
+          if(scrollPosition >0 && scrollPosition<2000){
             [section1,section2,section3].forEach((section)=>{
                 section.style.position = "fixed";
                 section.style.top = "63px";
@@ -176,21 +176,6 @@ function Page({scripts,Text3,Text4,Text5}){
                 </Box>
             </Box>
         </section> {/* New section */}
-
-        {/*<Text3 style={{marginTop:"1000px", ...opacity}}>{scripts.body.NFCMobileMenu.caption}</Text3>
-        <Box  style={{ display: 'flex',}}>
-        <img style={{marginTop:"30px",marginLeft:"160px"}} alt=""
-                 src="/Image Container Elevator.svg"
-            />
-            <Box flexDirection="column" >
-                <Text6 style={{color:"#9E9E9E"}}> asdasds </Text6>
-                <br></br>
-                <a>b  </a>
-                <a>c  </a>
-
-            </Box>
-
-        </Box>*/}
 
     </div>
     )
