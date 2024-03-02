@@ -1,5 +1,4 @@
 
-//test
 const ENGLISH={
     language:"ENGLISH",
     header:{
