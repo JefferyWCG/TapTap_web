@@ -14,6 +14,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '21.6.1'  # Set the Node.js version according to your project requirements
+    - name: List
+      run: ls
 
     - name: Install Dependencies
       run: npm install
