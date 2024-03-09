@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - Nov20_Jeff  # Replace with your default branch if it's not 'main'
+permissions:
+  contents: write
 
 jobs:
   deploy:
@@ -31,3 +33,5 @@ jobs:
         BRANCH: gh-pages  # The branch to deploy to
         FOLDER: app  # The folder the action should deploy
         CLEAN: true  # Automatically remove deleted files from the deployment
+        GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+
