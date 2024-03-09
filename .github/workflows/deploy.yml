@@ -35,3 +35,6 @@ jobs:
         CLEAN: true  # Automatically remove deleted files from the deployment
         GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
+    - name: RUN
+      run: npm start
+      working-directory: ./app
